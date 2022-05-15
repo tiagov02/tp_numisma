@@ -1,0 +1,7 @@
+{
+  "name": "tp_numisma",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
