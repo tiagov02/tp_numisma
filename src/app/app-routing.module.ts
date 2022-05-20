@@ -21,6 +21,10 @@ const routes: Routes = [
   },  {
     path: 'moedaexpandida',
     loadChildren: () => import('./moedaexpandida/moedaexpandida.module').then( m => m.MoedaexpandidaPageModule)
+  },
+  {
+    path: 'moedas',
+    loadChildren: () => import('./moedas/moedas.module').then( m => m.MoedasPageModule)
   }
 
 
