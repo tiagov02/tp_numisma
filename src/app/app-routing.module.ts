@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'form-coins',
+    loadChildren: () => import('./form-coins/form-coins.module').then(m => m.FormCoinsPageModule)
   }
+
 ];
 
 @NgModule({

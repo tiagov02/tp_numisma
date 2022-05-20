@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="test"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Anuncie a sua moeda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- header with image !-->
+  <header>
+    <img src="./assets/component.png" alt="">
+  </header>
+
+  <!-- form !-->
+  <form id="#form">
+
+    <!-- <label for="fname"> Currency name </label>
+    <br> !-->
+    <input type="text" id="cname" name="currencyname" placeholder="Nome da moeda">
+
+    <select id="type" name="type">
+      <option value="swap">Troca</option>
+      <option value="sale">Venda</option>
+      <option value="swap_sale">Ambas</option>
+    </select>
+
+    <select id="location" name="location">
+      <option value="1">Aveiro</option>
+      <!-- location !-->
+      <option value="sale">Venda</option>
+      <option value="swap_sale">Ambas</option>
+    </select>
+
+  </form>
+
+</ion-content>
