@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoedasPage implements OnInit {
 
+  public dataMoedas: any;
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void{
+    fetch('./assets/data/moedas.json')
+      .then(res=>res.json())
+      .then(json=>
+      {
+        this.dataMoedas=json;
+      });
   }
 
 }

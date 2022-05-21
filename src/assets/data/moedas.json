@@ -1,0 +1,10 @@
+{
+  "moeda1":{
+    "nome": "Moeda X",
+    "colecionador_nome": "Antonio Alves",
+    "localidade": "Porto",
+    "colecionador_id": "1",
+    "preco_euros": "150,00",
+    "tipo_transacao": "compra"
+  }
+}
