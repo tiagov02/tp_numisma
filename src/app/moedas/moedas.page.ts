@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoedasPage implements OnInit {
 
+  public queryText: string;
   public dataMoedas: any;
   constructor() { }
 
@@ -17,6 +18,11 @@ export class MoedasPage implements OnInit {
       {
         this.dataMoedas=json;
       });
+  }
+  updateMoedas(){
+    let queryTextLow=this.queryText.toLocaleLowerCase();
+    let filterMoedas= [];
+
   }
 
 }

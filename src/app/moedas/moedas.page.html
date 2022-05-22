@@ -9,7 +9,7 @@
   <header>
     <img src="./assets/component.png" alt="">
   </header>
-  <ion-searchbar showCancelButton="never" type="enter"></ion-searchbar>
+  <ion-searchbar showCancelButton="never" type="enter" [(ngModel)]="queryText" (ionInput)="updateMoedas()"></ion-searchbar>
 
   <ion-list>
     <ion-item *ngFor="let moedas of dataMoedas |keyvalue">{{moedas.value.colecionador_nome}}</ion-item>
