@@ -33,4 +33,6 @@ export class MoedasPage implements OnInit {
     this.dataMoedas=filterMoedas;
   }*/
 
+  //
+
 }
