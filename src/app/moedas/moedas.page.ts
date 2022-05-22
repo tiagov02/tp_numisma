@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import any = jasmine.any;
+//import any = jasmine.any;
 
 @Component({
   selector: 'app-moedas',
@@ -20,7 +20,7 @@ export class MoedasPage implements OnInit {
         this.dataMoedas=json;
       });
   }
-  updateMoedas(){
+  /*updateMoedas(){
     let _:any;
     let queryTextLow=this.queryText.toLocaleLowerCase();
     let filterMoedas= [];
@@ -31,6 +31,6 @@ export class MoedasPage implements OnInit {
     }
   });
     this.dataMoedas=filterMoedas;
-  }
+  }*/
 
 }
