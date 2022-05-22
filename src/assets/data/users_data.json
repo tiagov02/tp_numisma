@@ -2,6 +2,7 @@
   "admin":{
     "login": "admin",
     "passwd": "admin",
-    "id": "1"
+    "id": "1",
+    "nome": "António Alves"
   }
 }
