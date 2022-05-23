@@ -5,6 +5,17 @@
     "localidade": "Porto",
     "colecionador_id": "1",
     "preco_euros": "150,00",
-    "tipo_transacao": "compra"
+    "tipo_transacao": "compra",
+    "descricao": "Uma moeda realmente muito antiga. Moeda do anos 2000"
+  },
+
+  "moeda2":{
+    "nome": "Moeda X",
+    "colecionador_nome": "Joaquim",
+    "localidade": "Porto",
+    "colecionador_id": "1",
+    "preco_euros": "150,00",
+    "tipo_transacao": "compra",
+    "descricao": "Uma moeda realmente muito antiga. Moeda do anos 2000"
   }
 }
