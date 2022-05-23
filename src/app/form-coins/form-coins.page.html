@@ -14,6 +14,8 @@
     <img src="./assets/component.png" alt="">
   </header>
 
+  <h2>Passo 1 de 2</h2>
+
   <!-- form !-->
   <form id="#form">
 
@@ -22,6 +24,7 @@
     <input type="text" id="currencyname" name="currencyname" placeholder="Nome da moeda">
 
     <select id="type" name="type">
+      <option value="" disabled selected hidden>Tipo de Anúncio</option>
       <option value="swap">Troca</option>
       <option value="sale">Venda</option>
       <option value="swap_sale">Ambas</option>
@@ -29,6 +32,7 @@
 
     <select id="location" name="location">
       <!-- location !-->
+      <option value="" disabled selected hidden>Distrito</option>
       <option value="l1">Viana do Castelo</option>
       <option value="l2">Braga</option>
       <option value="l2">Porto</option>
@@ -42,6 +46,7 @@
     <input type="text" id="value" name="value" placeholder="Valor real">
 
     <select id="state" name="state">
+      <option value="" disabled selected hidden>Estado de conservação</option>
       <option value="l1">Novo</option>
       <option value="l2">Com pouco uso</option>
       <option value="l2">Degradado</option>
@@ -49,6 +54,7 @@
     </select>
 
     <input type="button" id="continueButton" value="Continuar">
+
   </form>
 
 </ion-content>
