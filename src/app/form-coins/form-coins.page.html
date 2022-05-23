@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button color="test"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Anuncie a sua moeda</ion-title>
+    <ion-title>Anuncie as suas moedas</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,7 +19,7 @@
 
     <!-- <label for="fname"> Currency name </label>
     <br> !-->
-    <input type="text" id="cname" name="currencyname" placeholder="Nome da moeda">
+    <input type="text" id="currencyname" name="currencyname" placeholder="Nome da moeda">
 
     <select id="type" name="type">
       <option value="swap">Troca</option>
@@ -31,8 +31,24 @@
       <!-- location !-->
       <option value="l1">Viana do Castelo</option>
       <option value="l2">Braga</option>
+      <option value="l2">Porto</option>
+      <option value="l2">Lisboa</option>
     </select>
 
+    <input type="text" id="qtd" name="qtd" placeholder="Quantidade">
+
+    <input type="text" id="price" name="price" placeholder="Preço de venda">
+
+    <input type="text" id="value" name="value" placeholder="Valor real">
+
+    <select id="state" name="state">
+      <option value="l1">Novo</option>
+      <option value="l2">Com pouco uso</option>
+      <option value="l2">Degradado</option>
+      <option value="l2">Muito degradado</option>
+    </select>
+
+    <input type="button" id="continueButton" value="Continuar">
   </form>
 
 </ion-content>

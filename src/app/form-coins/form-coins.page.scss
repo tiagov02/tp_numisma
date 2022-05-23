@@ -1,4 +1,4 @@
-form #cname {
+form #currencyname {
   box-sizing: border-box;
   position: absolute;
   width: 325px;
@@ -63,6 +63,73 @@ form #location {
   line-height: 133%;
   letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 0.79);
+}
+
+form #qtd {
+  box-sizing: border-box;
+  position: absolute;
+  width: 325px;
+  height: 50px;
+  left: 24px;
+  top: 406px;
+  background: #FFFFFF;
+  border: 1px solid #828282;
+  border-radius: 20px;
+}
+
+form #price {
+  position: absolute;
+  width: 325px;
+  height: 50px;
+  left: 24px;
+  top: 485px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #828282;
+  border-radius: 20px;
+}
+
+form #value {
+  position: absolute;
+  width: 325px;
+  height: 50px;
+  left: 24px;
+  top: 571px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #828282;
+  border-radius: 20px;
+}
+
+form #state {
+  position: absolute;
+  width: 325px;
+  height: 50px;
+  left: 24px;
+  top: 657px;
+  background: #FFFFFF;
+  border: 1px solid #828282;
+  border-radius: 20px;
+  padding: 12px 20px;
+  font-family: "JetBrains Mono", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.79);
+}
+
+form #continueButton {
+  font-family: "JetBrains Mono", sans-serif;
+  color: #EDEDED;
+  position: absolute;
+  width: 273px;
+  height: 50px;
+  left: 59px;
+  top: 740px;
+  background: rgba(238, 42, 45, 0.6);
+  border-radius: 15px;
 }
 
 /* label selection */
