@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'moedas',
     loadChildren: () => import('./moedas/moedas.module').then( m => m.MoedasPageModule)
+  },
+  {
+    path: 'formcoins',
+    loadChildren: () => import('./formcoins/formcoins.module').then( m => m.FormcoinsPageModule)
   }
 
 
