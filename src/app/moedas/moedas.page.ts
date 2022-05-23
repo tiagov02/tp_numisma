@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoedasPage implements OnInit {
 
-  public queryText: string;
-  public dataMoedas: any;
-  constructor() { }
+      public queryText: string;
+      public dataMoedas: any;
+      constructor() { }
 
-  ngOnInit(): void{
-    fetch('./assets/data/moedas.json')
-      .then(res=>res.json())
+      ngOnInit(): void{
+        fetch('./assets/data/moedas.json')
+          .then(res=>res.json())
       .then(json=>
       {
         this.dataMoedas=json;

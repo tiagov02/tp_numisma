@@ -1,0 +1,46 @@
+<header>
+  <img src="./assets/component.png" alt="">
+</header>
+
+
+<ion-content>
+  <div id="header">
+    <h1></h1>
+    <img src="./assets/imgPrincipal.png" class="center"/>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="email" required></ion-input>
+    </ion-item>
+    <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.required">
+      Email é de preenchimento obrigatório
+    </ion-text>
+    <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.pattern">
+      Email inválido
+    </ion-text>
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+    <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.nome.errors?.required">
+      Palavra-Passe é de preenchimento obrigatório
+    </ion-text>
+    <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.nome.errors?.minlength">
+      Palavra-Passe deverá ter pelo menos 2 caracteres
+    </ion-text>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Enviar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+    <h6 id="#pergunta">Ainda não tem conta nunisma?</h6>
+    <button id="#buttonRegistar">Registe-se</button>
+</ion-content>
