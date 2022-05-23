@@ -18,13 +18,18 @@ const routes: Routes = [
   {
     path: 'form-coins',
     loadChildren: () => import('./form-coins/form-coins.module').then(m => m.FormCoinsPageModule)
-  },  {
+  },
+  {
     path: 'moedaexpandida',
     loadChildren: () => import('./moedaexpandida/moedaexpandida.module').then( m => m.MoedaexpandidaPageModule)
   },
   {
     path: 'moedas',
     loadChildren: () => import('./moedas/moedas.module').then( m => m.MoedasPageModule)
+  },
+  {
+    path: 'start',
+    loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
   }
 
 
