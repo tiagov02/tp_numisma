@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavigationExtras, Router} from "@angular/router";
 //import {of} from "rxjs";
 //import any = jasmine.any;
 
@@ -11,7 +12,7 @@ export class MoedasPage implements OnInit {
 
       public queryText: string;
       public dataMoedas: any;
-      constructor() { }
+      constructor(private router: Router) { }
 
       ngOnInit(): void{
         fetch('./assets/data/moedas.json')
@@ -34,6 +35,14 @@ export class MoedasPage implements OnInit {
     this.dataMoedas=filterMoedas;
   }*/
 
-  //
-
+  public verDetalherMoeda(moedaKey: string){
+    let infoMoeda: NavigationExtras;
+    // eslint-disable-next-line prefer-const
+    infoMoeda= {
+      state:{
+        dadosMoeda: this.dataMoedas[moedaKey]
+      }
+    };
+    this.router.navigate(['moedaexpandida'],infoMoeda);
+  }
 }
