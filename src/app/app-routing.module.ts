@@ -32,9 +32,9 @@ const routes: Routes = [
     path: 'registar',
     loadChildren: () => import('./registar/registar.module').then( m => m.RegistarPageModule)
   }
-
-
 ];
+
+
 
 @NgModule({
   imports: [
