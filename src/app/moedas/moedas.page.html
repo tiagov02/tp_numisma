@@ -19,7 +19,7 @@
 
   <ion-grid>
     <ion-row *ngFor="let moeda of dataMoedas |keyvalue">
-      <ion-card (click)="verDetalherMoeda(moeda.value.toString())">
+      <ion-card (click)="verDetalherMoeda(moeda.value)">
         <!--Falta foto-->
         <ion-card-subtitle>{{moeda.value.nome}}</ion-card-subtitle>
         <ion-card-content>

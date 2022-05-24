@@ -35,7 +35,7 @@ export class MoedasPage implements OnInit {
     this.dataMoedas=filterMoedas;
   }*/
 
-  public verDetalherMoeda(moedaKey: string){
+  public verDetalherMoeda(moedaKey: any){
     let infoMoeda: NavigationExtras;
     // eslint-disable-next-line prefer-const
     infoMoeda= {
