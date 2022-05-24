@@ -1,0 +1,52 @@
+/*
+.User_Label_Section {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 150px;
+
+}
+
+.titulo {
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 15%;
+}
+
+.subtitulo {
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  font-weight: 700;
+  font-size: 10px;
+  margin-bottom: 5%;
+}
+
+ */
+
+ion-content{
+  .titulo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 16px;
+    width: 50%;
+  }
+  .subtitulo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    width: 80%;
+  }
+}
+
+
+

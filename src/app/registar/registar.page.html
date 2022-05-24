@@ -1,0 +1,77 @@
+<header>
+  <img src="./assets/component.png" alt="">
+</header>
+
+  <ion-content>
+
+    <ion-row class="User_Label_Section">
+      <ion-col text-center>
+        <ion-label class="titulo">Registe-se na Numisma!</ion-label>
+        <ion-label class="subtitulo">Preencha os campos para se registar!</ion-label>
+      </ion-col>
+    </ion-row>
+
+
+    <form [formGroup]="formRegistar" (ngSubmit)="submitForm()" novalidate>
+
+
+      <ion-item lines="full">
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" formControlName="name" required></ion-input>
+      </ion-item>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.required">
+        Nome é de preenchimento obrigatório
+      </ion-text>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.pattern">
+        Nome inválido
+      </ion-text>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email" required></ion-input>
+      </ion-item>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.required">
+        Email é de preenchimento obrigatório
+      </ion-text>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.pattern">
+        Email inválido
+      </ion-text>
+
+
+      <ion-item lines="full">
+        <ion-label position="floating">Nome de Utilizador</ion-label>
+        <ion-input type="email" formControlName="username" required></ion-input>
+      </ion-item>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.required">
+        Nome de Utilizador é de preenchimento obrigatório
+      </ion-text>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.email.errors?.pattern">
+        Nome de Utilizador inválido
+      </ion-text>
+
+
+      <ion-item lines="full">
+        <ion-label position="floating">Palavra Passe</ion-label>
+        <ion-input type="password" formControlName="password" required></ion-input>
+      </ion-item>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.nome.errors?.required">
+        Palavra-Passe é de preenchimento obrigatório
+      </ion-text>
+      <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.nome.errors?.minlength">
+        Palavra-Passe deverá ter pelo menos 2 caracteres
+      </ion-text>
+      <h1></h1>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Registar</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-button color="danger" fill="clear" size="full">Já tenho uma conta</ion-button>
+
+    </form>
+  </ion-content>
+
+
+
+
