@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: () => import('./form-coins/form-coins.module').then(m => m.FormCoinsPageModule)
   },
   {
+    path: 'formcoins',
+    loadChildren: () => import('./formcoins/formcoins.module').then(m => m.FormcoinsPageModule)
+  },
+  {
     path: 'moedaexpandida',
     loadChildren: () => import('./moedaexpandida/moedaexpandida.module').then( m => m.MoedaexpandidaPageModule)
   },
