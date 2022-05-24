@@ -17,7 +17,7 @@ describe('RegistarPage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
-
+//fgh
   it('should create', () => {
     expect(component).toBeTruthy();
   });

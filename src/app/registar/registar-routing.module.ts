@@ -9,7 +9,7 @@ const routes: Routes = [
     component: RegistarPage
   }
 ];
-
+//fgh
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
