@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {StartPageModule} from "./start/start.module";
 
 const routes: Routes = [
   {
@@ -12,10 +13,6 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
     path: 'form-coins',
     loadChildren: () => import('./form-coins/form-coins.module').then(m => m.FormCoinsPageModule)
   },
@@ -26,6 +23,10 @@ const routes: Routes = [
   {
     path: 'moedas',
     loadChildren: () => import('./moedas/moedas.module').then( m => m.MoedasPageModule)
+  },
+  {
+    path: 'start',
+    loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
   }
 
 
