@@ -18,4 +18,5 @@ import { StartPage } from './start.page';
     ],
   declarations: [StartPage]
 })
+//
 export class StartPageModule {}
