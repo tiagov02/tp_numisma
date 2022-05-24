@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="test"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Anuncie as suas moedas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="IHMForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" formControlName="nome" required=""></ion-input>
+    </ion-item>
+    <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.nome.errors?.required">
+      Campo obrigatório
+    </ion-text>
+    <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.nome.errors?.minlength">
+      O nome da moeda tem de ter, no mínimo, 2 caracteres
+    </ion-text>
+
+    <!--
+    <ion-item>
+      <ion-label>Tipo de Anúncio</ion-label>
+      <ion-select interface="typeAd" formControlName="typeAd">
+        <ion-select-option *ngFor="let item of typeAdList" value="{{item.id}}">
+        {{ item.name }}
+      </ion-select-option>
+        <ion-select-option value="tp2">Venda</ion-select-option>
+        <ion-select-option value="tp3">Ambas</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.nome.errors?.required">
+      Campo obrigatório
+    </ion-text>
+    !-->
+
+    <!--
+    <ion-item>
+      <ion-label>Localidade</ion-label>
+      <ion-select interface="locality" formControlName="locality">
+        <ion-select-option value="tp1">Troca</ion-select-option>
+        <ion-select-option value="tp2">Venda</ion-select-option>
+        <ion-select-option value="tp3">Ambas</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-text class="ion-padding" color="danger" >
+      Campo obrigatório
+    </ion-text>
+    !-->
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Enviar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

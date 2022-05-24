@@ -1,135 +1,151 @@
-form #currencyname {
-  box-sizing: border-box;
-  position: absolute;
-  width: 325px;
-  height: 50px;
-  left: 24px;
-  top: 169px;
-  background: #FFFFFF;
-  border: 1px solid #828282;
-  border-radius: 20px;
-}
+ion-content {
 
-input[type=text] {
-  position: absolute;
-  width: 46px;
-  height: 20px;
-  left: 61px;
-  top: 184px;
-  padding: 12px 20px;
-  font-family: "JetBrains Mono", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 133%;
-  letter-spacing: 0.2px;
-  color: rgba(0, 0, 0, 0.79);
-}
+  h2 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.79);
+  }
 
-form #type, select {
-  box-sizing: border-box;
-  position: absolute;
-  width: 325px;
-  height: 50px;
-  left: 24px;
-  top: 248px;
-  background: #FFFFFF;
-  border: 1px solid #828282;
-  border-radius: 20px;
-  padding: 12px 20px;
-  font-family: "JetBrains Mono", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 133%;
-  letter-spacing: 0.2px;
-  color: rgba(0, 0, 0, 0.79);
-}
+  form #currencyname {
+    /*width: 325px;
+    height: 50px;
+    top: 30px;*/
+    height: 50px;
+    width: 273px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    top: 30px;
+    background: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 20px;
+  }
 
-form #location {
-  position: absolute;
-  width: 325px;
-  height: 50px;
-  left: 25px;
-  top: 327px;
-  background: #FFFFFF;
-  border: 1px solid #828282;
-  border-radius: 20px;
-  padding: 12px 20px;
-  font-family: "JetBrains Mono", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 133%;
-  letter-spacing: 0.2px;
-  color: rgba(0, 0, 0, 0.79);
-}
+  input[type=text] {
+    position: relative;
+    width: 46px;
+    height: 20px;
+    left: 61px;
+    top: 184px;
+    padding: 12px 20px;
+    font-family: "JetBrains Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.79);
+  }
 
-form #qtd {
-  box-sizing: border-box;
-  position: absolute;
-  width: 325px;
-  height: 50px;
-  left: 24px;
-  top: 406px;
-  background: #FFFFFF;
-  border: 1px solid #828282;
-  border-radius: 20px;
-}
+  form #type, select {
+    position: relative;
+    box-sizing: border-box;
+    width: 325px;
+    height: 50px;
+    left: 33px;
+    top: 70px;
+    background: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-family: "JetBrains Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.79);
+  }
 
-form #price {
-  position: absolute;
-  width: 325px;
-  height: 50px;
-  left: 24px;
-  top: 485px;
-  box-sizing: border-box;
-  background: #FFFFFF;
-  border: 1px solid #828282;
-  border-radius: 20px;
-}
+  form #location {
+    width: 325px;
+    height: 50px;
+    left: 33px;
+    top: 110px;
+    background: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-family: "JetBrains Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.79);
+  }
 
-form #value {
-  position: absolute;
-  width: 325px;
-  height: 50px;
-  left: 24px;
-  top: 571px;
-  box-sizing: border-box;
-  background: #FFFFFF;
-  border: 1px solid #828282;
-  border-radius: 20px;
-}
+  form #qtd {
+    box-sizing: border-box;
+    width: 325px;
+    height: 50px;
+    left: 33px;
+    top: 150px;
+    background: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 20px;
+  }
 
-form #state {
-  position: absolute;
-  width: 325px;
-  height: 50px;
-  left: 24px;
-  top: 657px;
-  background: #FFFFFF;
-  border: 1px solid #828282;
-  border-radius: 20px;
-  padding: 12px 20px;
-  font-family: "JetBrains Mono", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 133%;
-  letter-spacing: 0.2px;
-  color: rgba(0, 0, 0, 0.79);
-}
+  form #price {
+    width: 325px;
+    height: 50px;
+    left: 33px;
+    top: 190px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 20px;
+  }
 
-form #continueButton {
-  font-family: "JetBrains Mono", sans-serif;
-  color: #EDEDED;
-  position: absolute;
-  width: 273px;
-  height: 50px;
-  left: 59px;
-  top: 740px;
-  background: rgba(238, 42, 45, 0.6);
-  border-radius: 15px;
-}
+  form #value {
+    width: 325px;
+    height: 50px;
+    left: 33px;
+    top: 230px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 20px;
+  }
 
-/* label selection */
+  form #state {
+    width: 325px;
+    height: 50px;
+    left: 33px;
+    top: 270px;
+    background: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-family: "JetBrains Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.79);
+  }
+
+  form #continueButton {
+    position: relative;
+    font-family: "JetBrains Mono", sans-serif;
+    color: #EDEDED;
+    width: 273px;
+    height: 50px;
+    left: 59px;
+    top: 310px;
+    background: rgba(238, 42, 45, 0.6);
+    border: 1px rgba(238, 42, 45, 0.6);
+    border-radius: 15px;
+  }
+
+  /* label selection */
+}

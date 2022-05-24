@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class StartPage implements OnInit {
 
-  Form: FormGroup;
+  form: FormGroup;
   isSubmitted: boolean;
 
   constructor(public formBuilder: FormBuilder) {
@@ -16,23 +16,23 @@ export class StartPage implements OnInit {
   }
 
   ngOnInit() {
-    this.Form = this.formBuilder.group({
+    this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
-      password: ['', [Validators.required, Validators.minLength(2)]]
+      password: ['', [Validators.required, Validators.minLength(2),Validators.maxLength(10)]]
     });
   }
 
   submitForm() {
     this.isSubmitted = true;
-    if (!this.Form.valid) {
+    if (!this.form.valid) {
       return false;
     } else {
-      console.log(this.Form.value);
+      console.log(this.form.value);
     }
   }
 
   get formControls() {
-    return this.Form.controls;
+    return this.form.controls;
   }
 
 }

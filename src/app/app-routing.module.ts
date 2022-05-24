@@ -26,10 +26,6 @@ const routes: Routes = [
   {
     path: 'moedas',
     loadChildren: () => import('./moedas/moedas.module').then( m => m.MoedasPageModule)
-  },
-  {
-    path: 'start',
-    loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
   }
 
 
