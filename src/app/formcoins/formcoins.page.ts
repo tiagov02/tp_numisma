@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Observable, timer} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {falseIfMissing} from "protractor/built/util";
 
 @Component({
   selector: 'app-formcoins',
