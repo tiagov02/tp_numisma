@@ -56,6 +56,7 @@ export class FormcoinsPage implements OnInit {
     // eslint-disable-next-line eqeqeq
     if(this.isSubmitted==true) {
       this.router.navigate(['formcoinscam']);
+      //nao funciona
     }
   }
 
