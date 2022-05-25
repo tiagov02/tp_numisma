@@ -65,10 +65,12 @@
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="danger" expand="block">Registar</ion-button>
+         <!--<ion-button type="submit" color="danger" expand="block">Registar</ion-button> -->
+          <ion-button type="button" id='button' color="danger" expand="block" (click)="registarUser()">Registar</ion-button>
         </ion-col>
+        <h2 id="texto"></h2>
       </ion-row>
-      <ion-button color="danger" fill="clear" size="full">Já tenho uma conta</ion-button>
+      <ion-button (click)="voltarLogin()" color="danger" fill="clear" size="full">Já tenho uma conta</ion-button>
 
     </form>
   </ion-content>

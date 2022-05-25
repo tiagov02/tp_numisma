@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {delay} from "rxjs/operators";
 
 @Component({
   selector: 'app-registar',
@@ -10,8 +12,9 @@ export class RegistarPage implements OnInit {
 
   formRegistar: FormGroup;
   isSubmitted: boolean;
+  delayInMilliseconds = 2000;
 
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder, private router: Router) {
     this.isSubmitted = false;
   }
 
@@ -32,6 +35,24 @@ export class RegistarPage implements OnInit {
       console.log(this.formRegistar.value);
     }
   }
+
+  registarUser() {
+    this.isSubmitted = true;
+    if (!this.formRegistar.valid) {
+      return false;
+    } else {
+      document.getElementById('texto').innerHTML = "Utilizador registado com sucesso";
+      new Promise(f => setTimeout(f, 2000));
+      this.router.navigate(['start']);
+    }
+  }
+
+
+
+  voltarLogin(){
+    this.router.navigate(['start']);
+  }
+
   get formControls() {
     return this.formRegistar.controls;
   }
