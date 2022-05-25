@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Observable, timer} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {NavigationExtras, Router} from '@angular/router';
 
 @Component({
   selector: 'app-formcoins',
@@ -13,7 +14,7 @@ export class FormcoinsPage implements OnInit {
   formcoins: FormGroup;
   isSubmitted: boolean;
 
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder, private router: Router) {
     this.isSubmitted = false;
   }
 
@@ -35,12 +36,27 @@ export class FormcoinsPage implements OnInit {
       return false;
     } else {
       console.log(this.formcoins.value);
+      this.router.navigate(['formcoinscam']);
     }
   }
 
   // eslint-disable-next-line @typescript-eslint/member-ordering
   get formControls() {
     return this.formcoins.controls;
+  }
+
+  continuetoformcoins(){
+    //let infoMoeda: NavigationExtras;
+    // eslint-disable-next-line prefer-const
+    /*infoMoeda= {
+      state:{
+        dadosMoeda: this.dataMoedas[moedaKey]
+      }
+    };*/
+    // eslint-disable-next-line eqeqeq
+    if(this.isSubmitted==true) {
+      this.router.navigate(['formcoinscam']);
+    }
   }
 
 }
