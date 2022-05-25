@@ -31,7 +31,8 @@ const routes: Routes = [
   {
     path: 'registar',
     loadChildren: () => import('./registar/registar.module').then( m => m.RegistarPageModule)
-  },  {
+  },
+  {
     path: 'formcoinscam',
     loadChildren: () => import('./formcoinscam/formcoinscam.module').then( m => m.FormcoinscamPageModule)
   }
