@@ -23,8 +23,8 @@
   <ion-grid>
     <ion-row *ngFor="let moeda of dataMoedas |keyvalue">
       <ion-card (click)="verDetalherMoeda(moeda.key)">
-        <!--Falta foto-->
-        <ion-card-subtitle>{{moeda.value.nome}}</ion-card-subtitle>
+        <img src="./assets/{{moeda.value.imagem}}">
+        <ion-card-title>{{moeda.value.nome}}</ion-card-title>
         <ion-card-content>
           <p>Descrição: {{moeda.value.descricao}}</p>
           <p>Preço: {{moeda.value.preco_euros}}€</p>
