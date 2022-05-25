@@ -43,7 +43,6 @@ export class MoedasPage implements OnInit {
         dadosMoeda: this.dataMoedas[moedaKey]
       }
     };
-    console.log(infoMoeda)
     this.router.navigate(['moedaexpandida'],infoMoeda);
   }
 }

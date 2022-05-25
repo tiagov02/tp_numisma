@@ -1,15 +1,18 @@
 {
   "moeda1":{
+    "imagem": "moeda.jpg",
     "nome": "Moeda X",
     "colecionador_nome": "Antonio Alves",
     "localidade": "Porto",
     "colecionador_id": "1",
     "preco_euros": "150,00",
     "tipo_transacao": "compra",
-    "descricao": "Uma moeda realmente muito antiga. Moeda do anos 2000"
+    "descricao": "Uma moeda realmente muito antiga. Moeda do anos 2000",
+    "estadoConservacao": "Moeda nova"
   },
 
   "moeda2":{
+    "imagem": "moeda.jpg",
     "nome": "Moeda X",
     "colecionador_nome": "Joaquim",
     "localidade": "Porto",
