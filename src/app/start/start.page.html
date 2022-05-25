@@ -36,9 +36,9 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Login</ion-button>
+        <ion-button (click)="submitForm()" type="submit" color="danger" expand="block">Login</ion-button>
       </ion-col>
     </ion-row>
-  <ion-button color="danger" fill="clear" size="full">Registe-se</ion-button>
+  <ion-button (click)="registar()" color="danger" fill="clear" size="full">Registe-se</ion-button>
   </form>
 </ion-content>
