@@ -4,5 +4,11 @@
     "passwd": "admin",
     "id": "1",
     "nome": "António Alves"
+  },
+  "joaquim": {
+    "login": "joaquim",
+    "passwd": "joaquim",
+    "id": "2",
+    "nome": "Joaquim"
   }
 }
