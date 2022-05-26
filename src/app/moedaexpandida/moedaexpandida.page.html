@@ -7,11 +7,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="infoMoeda">
   <header>
     <img src="./assets/component.png" alt="">
   </header>
 
   <img id="img" src="./assets/{{infoMoeda.imagem}}">
+  <ion-text >
+    <center><h1>{{infoMoeda.nome}}</h1></center>
+  </ion-text>
+  <p>Localidade: {{infoMoeda.localidade}}</p>
+  <p>Descrição: {{infoMoeda.descricao}}</p>
+  <p *ngIf="infoMoeda.preco">Preço: {{infoMoeda.preco}}</p>
+  <p>Tipo de transação: {{infoMoeda.tipo_transacao}}</p>
+
+  <ion-button expand="block" color="test">Ver perfil</ion-button>
+  <ion-button expand="block" color="test">Contactar colecionador</ion-button>
 
 </ion-content>
