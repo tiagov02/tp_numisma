@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Submeter uma moeda', url: '/form-coins', icon: 'mail' },
+    { title: 'Submeter uma moeda', url: '/formcoins', icon: 'mail' },
     { title: 'Ver moedas', url: '/moedas', icon: 'paper-plane' },
     { title: 'Favorites', url: '/registar', icon: 'heart' }
   ];
