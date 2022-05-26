@@ -35,7 +35,11 @@ const routes: Routes = [
   {
     path: 'formcoinscam',
     loadChildren: () => import('./formcoinscam/formcoinscam.module').then( m => m.FormcoinscamPageModule)
+  },  {
+    path: 'intro',
+    loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
   }
+
 
 ];
 

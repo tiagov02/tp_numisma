@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Submeter uma moeda', url: '/formcoins', icon: 'mail' },
-    { title: 'Ver moedas', url: '/moedas', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/registar', icon: 'heart' }
+    { title: 'Página Principal', url: '/moedas', icon: 'home' },
+    { title: 'Anunciar', url: '/formcoins', icon: 'trending-up' },
+    { title: 'Mensagens', url: '/registar', icon: 'chatbubbles' },
+    { title: 'Meus Anúncios', url: '/registar', icon: 'bag' },
+    { title: 'Perfil', url: '/registar', icon: 'person-circle' },
+    { title: 'Sair', url: '/registar', icon: 'log-out' }
   ];
-  //public labels = [];
   constructor() {}
 }
