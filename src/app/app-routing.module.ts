@@ -5,12 +5,8 @@ import {StartPageModule} from "./start/start.module";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'start',
+    redirectTo: 'intro',
     pathMatch: 'full'
-  },
-  {
-    path: 'form-coins',
-    loadChildren: () => import('./form-coins/form-coins.module').then(m => m.FormCoinsPageModule)
   },
   {
     path: 'formcoins',
@@ -35,7 +31,8 @@ const routes: Routes = [
   {
     path: 'formcoinscam',
     loadChildren: () => import('./formcoinscam/formcoinscam.module').then( m => m.FormcoinscamPageModule)
-  },  {
+  },
+  {
     path: 'intro',
     loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
   }
