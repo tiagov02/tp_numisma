@@ -38,6 +38,7 @@ export class FormcoinsPage implements OnInit {
     } else {
       console.log(this.formcoins.value);
       this.router.navigate(['formcoinscam']);
+      console.log(this.formcoins.value.qtd);
     }
   }
 
