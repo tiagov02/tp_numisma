@@ -8,12 +8,13 @@ import { MoedasPageRoutingModule } from './moedas-routing.module';
 
 import { MoedasPage } from './moedas.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MoedasPageRoutingModule
+    MoedasPageRoutingModule,
   ],
   declarations: [MoedasPage]
 })

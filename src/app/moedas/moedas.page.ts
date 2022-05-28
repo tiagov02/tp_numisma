@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavigationExtras, Router} from '@angular/router';
 //import {of} from "rxjs";
+//import {of} from "rxjs";
 //import any = jasmine.any;
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @Component({
   selector: 'app-moedas',
@@ -10,32 +12,36 @@ import {NavigationExtras, Router} from '@angular/router';
 })
 export class MoedasPage implements OnInit {
 
-      public searchbar = document.querySelector('ion-searchbar');
-      public queryText: string;
-      public dataMoedas: any;
-      constructor(private router: Router) { }
+  //public searchbar = document.querySelector('ion-searchbar');
+  public dataMoedas: any;
+  public filterTerm: string;
+  constructor(private router: Router) {
+  }
 
-      ngOnInit(): void{
-        //this.searchbar.addEventListener('ionInput', this.handleInput);
-        fetch('./assets/data/moedas.json')
-          .then(res=>res.json())
+  ngOnInit(): void {
+    this.leJSON();
+  }
+
+  leJSON(){
+    fetch('./assets/data/moedas.json')
+      .then(res=>res.json())
       .then(json=>
       {
         this.dataMoedas=json;
       });
   }
-  /*updateMoedas(){
-    let _:any;
-    let queryTextLow=this.queryText.toLocaleLowerCase();
-    let filterMoedas= [];
-    _.forEach(this.dataMoedas,td=>{
-      let moedas=_.filter(td.dataMoedas,t=>(<any>t).nome.toLowerCase().includes(queryTextLow));
-      if(moedas.length){
-        filterMoedas.push({divisionName:td.divisionName,divisionMoedas:td.divisionMoedas});
+
+  updateMoedas(ev: any) {
+    this.leJSON();
+
+    const val= ev.target.value;
+
+    if(val && val.trim() != ''){
+      this.dataMoedas.value=this.dataMoedas.value.filter((item) => {
+        return(item.toLowerCase().indexOf(val.toLowerCase())>1);
+      });
     }
-  });
-    this.dataMoedas=filterMoedas;
-  }*/
+  }
 
   /*public handleInput(event) {
     const query = event.target.value.toLowerCase();
@@ -46,14 +52,14 @@ export class MoedasPage implements OnInit {
       });
     });
   }*/
-  public verDetalherMoeda(moedaKey: any){
+  public verDetalherMoeda(moedaKey: any) {
     let infoMoeda: NavigationExtras;
     // eslint-disable-next-line prefer-const
-    infoMoeda= {
-      state:{
+    infoMoeda = {
+      state: {
         dadosMoeda: this.dataMoedas[moedaKey]
       }
     };
-    this.router.navigate(['moedaexpandida'],infoMoeda);
+    this.router.navigate(['moedaexpandida'], infoMoeda);
   }
 }
