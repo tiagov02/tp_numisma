@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NavigationExtras, Router} from "@angular/router";
+import {NavigationExtras, Router} from '@angular/router';
 //import {of} from "rxjs";
 //import any = jasmine.any;
 
@@ -10,11 +10,13 @@ import {NavigationExtras, Router} from "@angular/router";
 })
 export class MoedasPage implements OnInit {
 
+      public searchbar = document.querySelector('ion-searchbar');
       public queryText: string;
       public dataMoedas: any;
       constructor(private router: Router) { }
 
       ngOnInit(): void{
+        //this.searchbar.addEventListener('ionInput', this.handleInput);
         fetch('./assets/data/moedas.json')
           .then(res=>res.json())
       .then(json=>
@@ -35,6 +37,15 @@ export class MoedasPage implements OnInit {
     this.dataMoedas=filterMoedas;
   }*/
 
+  /*public handleInput(event) {
+    const query = event.target.value.toLowerCase();
+    requestAnimationFrame(() => {
+      this.dataMoedas.forEach((item) => {
+        const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
+        item.style.display = shouldShow ? 'block' : 'none';
+      });
+    });
+  }*/
   public verDetalherMoeda(moedaKey: any){
     let infoMoeda: NavigationExtras;
     // eslint-disable-next-line prefer-const
