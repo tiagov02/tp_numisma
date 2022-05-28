@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,4 +17,6 @@ export class AppComponent {
     //Comentei esta parte, quando acabarmos como já esta feito descomentamos
   ];
   constructor() {}
+
+
 }
