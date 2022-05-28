@@ -2,21 +2,31 @@
   "moeda1":{
     "imagem": "coin.png",
     "nome": "Moeda X",
-    "colecionador_nome": "Antonio Alves",
+    "colecionador_nome": "António Alves",
     "localidade": "Porto",
     "preco_euros": "150,00",
     "tipo_transacao": "compra",
-    "descricao": "Uma moeda realmente muito antiga. Moeda do anos 2000",
+    "descricao": "Uma moeda de 90",
     "colecionador_user": "admin",
     "estadoConservacao": "Moeda nova"
   },
 
   "moeda2":{
     "imagem": "coin.png",
-    "nome": "Moeda Antiga",
+    "nome": "Moeda Y",
     "colecionador_nome": "Joaquim",
     "localidade": "Porto",
-    "tipo_transacao": "troca",
-    "descricao": "Uma moeda realmente muito antiga. Moeda do anos 2000"
+    "tipo_transacao": "Troca",
+    "descricao": "Uma moeda com pormenores dourados"
+  },
+
+  "moeda3":{
+    "imagem": "coin.png",
+    "nome": "Moeda Z",
+    "colecionador_nome": "José Miranda",
+    "localidade": "Viana do Castelo",
+    "preco_euros": "200,00",
+    "tipo_transacao": "compra",
+    "descricao": "Uma moeda do tempo de D. Afonos Henriques"
   }
 }
