@@ -10,7 +10,8 @@ import {Router} from "@angular/router";
 })
 export class StartPage implements OnInit {
 
-  Form: FormGroup;
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  form: FormGroup;
   isSubmitted: boolean;
 
   constructor(public formBuilder: FormBuilder, private router: Router) {
@@ -18,7 +19,7 @@ export class StartPage implements OnInit {
   }
 
   ngOnInit() {
-    this.Form = this.formBuilder.group({
+    this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       password: ['', [Validators.required, Validators.minLength(2),Validators.maxLength(10)]]
     });
@@ -26,10 +27,10 @@ export class StartPage implements OnInit {
 
   submitForm() {
     this.isSubmitted = true;
-    if (!this.Form.valid) {
+    if (!this.form.valid) {
       return false;
     } else {
-      console.log(this.Form.value);
+      console.log(this.form.value);
       this.router.navigate(['moedas']);
     }
   }
@@ -38,8 +39,9 @@ export class StartPage implements OnInit {
     this.router.navigate(['registar']);
   }
 
+  // eslint-disable-next-line @typescript-eslint/member-ordering
   get formControls() {
-    return this.Form.controls;
+    return this.form.controls;
   }
 
 }

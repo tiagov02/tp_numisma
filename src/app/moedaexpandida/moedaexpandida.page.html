@@ -19,8 +19,8 @@
   </ion-text>
   <p>Localidade: {{infoMoeda.localidade}}</p>
   <p>Descrição: {{infoMoeda.descricao}}</p>
-  <p *ngIf="infoMoeda.preco">Preço: {{infoMoeda.preco}}€</p>
-  <p>Tipo de transação: {{infoMoeda.tipo_transacao}}</p>
+  <p> Transação: {{infoMoeda.tipo_transacao}}</p>
+  <p *ngIf="infoMoeda.preco_euros"> Preço: {{infoMoeda.preco_euros}}€</p>
 
   <ion-button expand="block" color="test">Ver perfil</ion-button>
   <ion-button expand="block" color="test">Contactar colecionador</ion-button>

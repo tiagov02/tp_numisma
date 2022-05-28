@@ -1,0 +1,29 @@
+ion-content {
+
+
+
+  ion-card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ion-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 15px;
+  }
+
+  ion-card-title {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  ion-card-content span {
+    font-weight: bold;
+    color: black;
+  }
+
+}

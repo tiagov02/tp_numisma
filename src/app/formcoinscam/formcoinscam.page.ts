@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CamService } from '../services/cam.service';
 
 @Component({
   selector: 'app-formcoinscam',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormcoinscamPage implements OnInit {
 
-  constructor() { }
+  constructor(public photoService: CamService) { }
 
   ngOnInit() {
+  }
+
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
   }
 
 }
