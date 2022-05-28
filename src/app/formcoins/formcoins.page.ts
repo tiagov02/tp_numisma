@@ -4,6 +4,7 @@ import {Observable, timer} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {NavigationExtras, Router} from '@angular/router';
 
+// @ts-ignore
 @Component({
   selector: 'app-formcoins',
   templateUrl: './formcoins.page.html',
