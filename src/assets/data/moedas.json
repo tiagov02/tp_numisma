@@ -1,5 +1,5 @@
-{
-  "moeda1":{
+
+ [{
     "imagem": "coin.png",
     "nome": "Moeda X",
     "colecionador_nome": "António Alves",
@@ -11,7 +11,7 @@
     "estadoConservacao": "Moeda nova"
   },
 
-  "moeda2":{
+  {
     "imagem": "coin.png",
     "nome": "Moeda Y",
     "colecionador_nome": "Joaquim",
@@ -20,7 +20,7 @@
     "descricao": "Uma moeda com pormenores dourados"
   },
 
-  "moeda3":{
+  {
     "imagem": "coin.png",
     "nome": "Moeda Z",
     "colecionador_nome": "José Miranda",
@@ -28,5 +28,5 @@
     "preco_euros": "200,00",
     "tipo_transacao": "compra",
     "descricao": "Uma moeda do tempo de D. Afonos Henriques"
-  }
-}
+  }]
+

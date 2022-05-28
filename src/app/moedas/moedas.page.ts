@@ -36,9 +36,9 @@ export class MoedasPage implements OnInit {
 
     const val= ev.target.value;
 
-    if(val && val.trim() != ''){
-      this.dataMoedas.value=this.dataMoedas.value.filter((item) => {
-        return(item.toLowerCase().indexOf(val.toLowerCase())>1);
+    if (val && val.trim() != '') {
+      this.dataMoedas = this.dataMoedas.filter((item) => {
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       });
     }
   }
@@ -52,12 +52,11 @@ export class MoedasPage implements OnInit {
       });
     });
   }*/
-  public verDetalherMoeda(moedaKey: any) {
+  public verDetalherMoeda(moeda: any) {
     let infoMoeda: NavigationExtras;
-    // eslint-disable-next-line prefer-const
     infoMoeda = {
       state: {
-        dadosMoeda: this.dataMoedas[moedaKey]
+        dadosMoeda: moeda
       }
     };
     this.router.navigate(['moedaexpandida'], infoMoeda);

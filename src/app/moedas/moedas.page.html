@@ -25,25 +25,25 @@
   <!---->
 
   <ion-grid>
-    <ion-row *ngFor="let moeda of dataMoedas |keyvalue">
-      <ion-card (click)="verDetalherMoeda(moeda.key)">
+    <ion-row *ngFor="let moeda of dataMoedas">
+      <ion-card (click)="verDetalherMoeda(moeda)">
         <ion-item>
-          <img src="./assets/{{moeda.value.imagem}}">
+          <img src="./assets/{{moeda.imagem}}">
           <ion-row id="row_into_card">
-            <ion-card-title>{{moeda.value.nome}}</ion-card-title>
-            <ng-container *ngIf="moeda.value.preco_euros; then price; else type_transaction"></ng-container>
+            <ion-card-title>{{moeda.nome}}</ion-card-title>
+            <ng-container *ngIf="moeda.preco_euros; then price; else type_transaction"></ng-container>
             <ng-template #price>
-              <ion-card-subtitle>{{moeda.value.preco_euros}}€</ion-card-subtitle>
+              <ion-card-subtitle>{{moeda.preco_euros}}€</ion-card-subtitle>
             </ng-template>
             <ng-template #type_transaction>
-              <ion-card-subtitle>{{moeda.value.tipo_transacao}}</ion-card-subtitle>
+              <ion-card-subtitle>{{moeda.tipo_transacao}}</ion-card-subtitle>
             </ng-template>
             <ion-card-content>
               <!-- <p> <span>Descrição:</span> {{moeda.value.descricao}}</p> !-->
               <!-- <p> <span>Tipo:</span> {{moeda.value.tipo_transacao}}</p> !-->
               <!-- <p>{{moeda.value.preco_euros}}€</p> !-->
-              <ion-item> <ion-icon name="location-sharp"></ion-icon> {{moeda.value.localidade}}</ion-item>
-              <ion-item> <ion-icon name="person-circle-sharp"></ion-icon> {{moeda.value.colecionador_nome}} </ion-item>
+              <ion-item> <ion-icon name="location-sharp"></ion-icon> {{moeda.localidade}}</ion-item>
+              <ion-item> <ion-icon name="person-circle-sharp"></ion-icon> {{moeda.colecionador_nome}} </ion-item>
             </ion-card-content>
           </ion-row>
         </ion-item>

@@ -8,6 +8,7 @@ import { MoedasPageRoutingModule } from './moedas-routing.module';
 
 import { MoedasPage } from './moedas.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { MoedasPage } from './moedas.page';
     FormsModule,
     IonicModule,
     MoedasPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [MoedasPage]
 })
