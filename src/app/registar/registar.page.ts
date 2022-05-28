@@ -41,8 +41,8 @@ export class RegistarPage implements OnInit {
     if (!this.formRegistar.valid) {
       return false;
     } else {
-      document.getElementById('texto').innerHTML = "Utilizador registado com sucesso";
       new Promise(f => setTimeout(f, 2000));
+      confirm("Utilizador registado com sucesso");
       this.router.navigate(['start']);
     }
   }
