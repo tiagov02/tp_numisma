@@ -42,7 +42,7 @@ export class RegistarPage implements OnInit {
       return false;
     } else {
       new Promise(f => setTimeout(f, 2000));
-      confirm("Utilizador registado com sucesso!");
+      confirm("Utilizador registado com sucesso");
       this.router.navigate(['start']);
     }
   }
