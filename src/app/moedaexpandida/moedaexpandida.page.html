@@ -1,8 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="end">
       <ion-menu-button color="test"></ion-menu-button>
-        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="moedas" color="test"></ion-back-button>
     </ion-buttons>
     <ion-title *ngIf="infoMoeda">{{infoMoeda.nome}}</ion-title>
   </ion-toolbar>
@@ -13,16 +15,28 @@
     <img src="./assets/component.png" alt="">
   </header>
 
-  <img id="img" src="./assets/{{infoMoeda.imagem}}">
-  <ion-text >
-    <center><h1>{{infoMoeda.nome}}</h1></center>
-  </ion-text>
-  <p>Localidade: {{infoMoeda.localidade}}</p>
-  <p>Descrição: {{infoMoeda.descricao}}</p>
-  <p>Transação: {{infoMoeda.tipo_transacao}}</p>
-  <p *ngIf="infoMoeda.preco_euros"> Preço: {{infoMoeda.preco_euros}}€</p>
+  <h1>{{infoMoeda.nome}}</h1>
 
-  <ion-button expand="block" color="test">Ver perfil</ion-button>
-  <ion-button expand="block" color="test">Contactar colecionador</ion-button>
+  <img id="img" src="./assets/{{infoMoeda.imagem}}">
+
+  <div class="content">
+      <ion-item id="listone" class="list">
+        <ng-container *ngIf="infoMoeda.preco_euros; then price; else type_transaction"></ng-container>
+        <ng-template #price>
+          <ion-label class="labelone">{{infoMoeda.preco_euros}}€</ion-label>
+        </ng-template>
+        <ng-template #type_transaction>
+          <ion-label class="labelone">{{infoMoeda.tipo_transacao}}</ion-label>
+        </ng-template>
+      </ion-item>
+      <p><span>Localidade:</span> {{infoMoeda.localidade}}</p>
+      <p><span>Descrição:</span> {{infoMoeda.descricao}}</p>
+      <p><span>Transação:</span> {{infoMoeda.tipo_transacao}}</p>
+  </div>
+
+  <div class="twobuttons">
+    <ion-button class="button" expand="block">Ver perfil</ion-button>
+    <ion-button class="button" expand="block">Contactar colecionador</ion-button>
+  </div>
 
 </ion-content>

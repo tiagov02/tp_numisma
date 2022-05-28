@@ -31,21 +31,62 @@
  */
 
 ion-content{
-  .titulo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 700;
-    font-size: 16px;
-    width: 50%;
+
+  h1 {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: rgba(0, 0, 0, 0.85);
   }
-  .subtitulo {
+
+  h2 {
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.79);
+  }
+
+  ion-item, ion-row {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-size: 16px;
     width: 80%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.79);
   }
+
+  #button {
+    --background: rgba(238, 42, 45, 0.6);
+    --border-radius: 15px;
+    --background-activated: rgba(238, 42, 45, 0.6);
+    --background-focused: rgba(238, 42, 45, 0.6);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #EDEDED;
+  }
+
+  #buttonlogin {
+    --color: rgba(0, 0, 0, 0.79);
+    text-align: center;
+    --background: transparent;
+    --background-activated: transparent;
+    --background-focused: transparent;
+  }
+
 }
 
 

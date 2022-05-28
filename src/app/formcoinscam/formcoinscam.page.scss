@@ -39,12 +39,15 @@ ion-content {
     height: 300px;
     border: 1px solid rgba(0, 0, 0, 0.79);
     --background-activated: rgba(238, 42, 45, 0.6);
+    --background-focused: rgba(238, 42, 45, 0.6);
+    --background-focused-opacity: 30%;
     --background-activated-opacity: 30%;
   }
 
   #cam {
     --background: rgba(238, 42, 45, 0.6);
     --background-activated: rgba(238, 42, 45, 0.6);
+    --background-focused: rgba(238, 42, 45, 0.6);
     float: right;
     margin-top: 0;
     --border-radius: 20px;
@@ -59,6 +62,7 @@ ion-content {
   #confirm {
     --background: rgba(238, 42, 45, 0.6);
     --background-activated: rgba(238, 42, 45, 0.6);
+    --background-focused: rgba(238, 42, 45, 0.6);
     --border-radius: 15px;
     margin-top: 45px;
     font-style: normal;
