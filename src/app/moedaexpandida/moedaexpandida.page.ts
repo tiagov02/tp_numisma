@@ -30,4 +30,14 @@ export class MoedaexpandidaPage implements OnInit {
     this.router.navigate(['messages'],dadosMoeda);
   }
 
+  verPerfil(userName:any){
+    let dataUser:NavigationExtras;
+    dataUser={
+      state:{
+        nome_user:userName
+      }
+    }
+    this.router.navigate(['infocolecionador'],dataUser);
+  }
+
 }

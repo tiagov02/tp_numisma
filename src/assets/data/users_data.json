@@ -3,18 +3,24 @@
     "login": "admin",
     "passwd": "admin",
     "id": "1",
-    "nome": "António Alves"
+    "nome": "António Alves",
+    "imagem": "user.jpg",
+    "localidade": "Porto"
   },
   "joaquim": {
     "login": "joaquim",
     "passwd": "joaquim",
     "id": "2",
-    "nome": "Joaquim"
+    "nome": "Joaquim",
+    "imagem": "user.jpg",
+    "localidade": "Porto"
   },
   "josemiranda": {
     "login": "josemiranda",
     "passwd": "josemiranda",
     "id": "2",
-    "nome": "José Miranda"
+    "nome": "José Miranda",
+    "imagem": "user.jpg",
+    "localidade": "Porto"
   }
 }

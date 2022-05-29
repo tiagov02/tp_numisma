@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>infocolecionador</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button color="test"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="moedas" color="test"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="userAtual">{{userAtual.nome}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="userAtual">
+  <header>
+    <img src="./assets/component.png" alt="">
+  </header>
+
+  <h1>{{userAtual.nome}}</h1>
+
+  <img id="img" src="./assets/{{userAtual.imagem}}">
+
+  <div class="content">
+    <p><span>Localidade:</span> {{userAtual.localidade}}</p>
+  </div>
 
 </ion-content>
