@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'moedaexpconv',
     loadChildren: () => import('./moedaexpconv/moedaexpconv.module').then( m => m.MoedaexpconvPageModule)
+  },
+  {
+    path: 'infocolecionador',
+    loadChildren: () => import('./infocolecionador/infocolecionador.module').then( m => m.InfocolecionadorPageModule)
   }
 
 
