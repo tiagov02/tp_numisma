@@ -37,6 +37,8 @@ export class StartPage implements OnInit {
     this.user.setValue();
   }
 
+
+
   registar(){
     this.router.navigate(['registar']);
   }
