@@ -7,8 +7,7 @@
     "preco_euros": "150,00",
     "tipo_transacao": "compra",
     "descricao": "Uma moeda de 90",
-    "colecionador_user": "admin",
-    "estadoConservacao": "Moeda nova"
+    "estadoConservacao": "Novo"
   },
 
   {
@@ -16,8 +15,9 @@
     "nome": "Moeda Y",
     "colecionador_nome": "Joaquim",
     "localidade": "Porto",
-    "tipo_transacao": "Troca",
-    "descricao": "Uma moeda com pormenores dourados"
+    "tipo_transacao": "troca",
+    "descricao": "Uma moeda com pormenores dourados",
+    "estadoConservacao": "Muito degradado"
   },
 
   {
@@ -27,6 +27,7 @@
     "localidade": "Viana do Castelo",
     "preco_euros": "200,00",
     "tipo_transacao": "compra",
-    "descricao": "Uma moeda do tempo de D. Afonos Henriques"
+    "descricao": "Uma moeda do tempo de D. Afonos Henriques",
+    "estadoConservacao": "Degradado"
   }]
 
