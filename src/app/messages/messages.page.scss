@@ -1,0 +1,62 @@
+ion-content {
+
+  ion-item {
+    --border-color: transparent;
+    --background: rgba(238, 42, 45, 0.6);
+    --border-radius: 15px;
+    width: 70%;
+  }
+
+  .right {
+    margin-right: 10px;
+    float: right;
+    text-align: left;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #EDEDED;
+    margin-top: 10px;
+  }
+
+  .left {
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    text-align: left;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #EDEDED;
+  }
+
+  #temp_r {
+    --border-color: transparent;
+    --background: transparent;
+  }
+
+  #temp_l {
+    --border-color: transparent;
+    --background: transparent;
+  }
+
+  #input_message {
+    --border-color: transparent;
+    --background: rgba(231, 78, 80, 0.1);
+    /*border-radius: 25px;*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  ion-input {
+    height: 50px;
+  }
+
+  ion-button {
+    --background: transparent;
+    color: black;
+    --background-activated: transparent;
+    --background-focused: transparent;
+  }
+
+}

@@ -1,14 +1,17 @@
 {
   "1": {
-    "to": "antonio",
-    "message": "Olá pretendo comprar a sua moeda!"
+    "user_to": "Juliano Cunha",
+    "text_message": "Boa tarde, a sua moeda continua diposnível?",
+    "temp": "14:35"
   },
   "2": {
-    "from": "antonio",
-    "message": "Nao pretendo comprar"
+    "user_from": "Juliano Cunha",
+    "text_message": "Sim.",
+    "temp": "15:00"
   },
   "3": {
-  "from": "antonio",
-  "message": "Nao pretendo comprar"
+    "user_to": "Juliano Cunha",
+    "text_message": "Estou interessado em negociar consigo.",
+    "temp": "15:10"
   }
 }

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Juliano Cunha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let msg of infoMsg | keyvalue">
+    <ng-container *ngIf="msg.value.user_to; then left; else right"></ng-container>
+    <ng-template #left>
+      <ion-row class="left">
+        <ion-item class="left">{{msg.value.text_message}}</ion-item>
+        <ion-item id="temp_l">{{msg.value.temp}}</ion-item>
+      </ion-row>
+    </ng-template>
+    <ng-template #right>
+      <ion-row class="right">
+        <ion-item class="right">{{msg.value.text_message}}</ion-item>
+        <ion-item id="temp_r">{{msg.value.temp}}</ion-item>
+      </ion-row>
+    </ng-template>
+  </div>
+
+  <ion-item id="input_message">
+    <ion-input placeholder="Escreva a sua mensagem..."></ion-input>
+    <ion-button> <ion-icon name="send-sharp"></ion-icon> </ion-button>
+  </ion-item>
+
+</ion-content>
