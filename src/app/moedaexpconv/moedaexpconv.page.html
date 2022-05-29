@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="moedaconvidado" color="test"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="infoMoeda">{{infoMoeda.nome}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="infoMoeda">
+  <header>
+    <img src="./assets/component.png" alt="">
+  </header>
+
+  <h1>{{infoMoeda.nome}}</h1>
+
+  <img id="img" src="./assets/{{infoMoeda.imagem}}">
+
+  <div class="content">
+    <ion-item id="listone" class="list">
+      <ng-container *ngIf="infoMoeda.preco_euros; then price; else type_transaction"></ng-container>
+      <ng-template #price>
+        <ion-label class="labelone">{{infoMoeda.preco_euros}}€</ion-label>
+      </ng-template>
+      <ng-template #type_transaction>
+        <ion-label class="labelone">{{infoMoeda.tipo_transacao}}</ion-label>
+      </ng-template>
+    </ion-item>
+    <p><span>Localidade:</span> {{infoMoeda.localidade}}</p>
+    <p><span>Descrição:</span> {{infoMoeda.descricao}}</p>
+    <p><span>Transação:</span> {{infoMoeda.tipo_transacao}}</p>
+  </div>
+
+  <div class="twobuttons">
+    <ion-button (click)="changepanel()" class="button" expand="block">Ver perfil</ion-button>
+    <ion-button (click)="changepanel()" class="button" expand="block">Contactar colecionador</ion-button>
+  </div>
+
+</ion-content>

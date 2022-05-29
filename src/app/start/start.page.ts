@@ -48,4 +48,8 @@ export class StartPage implements OnInit {
     return this.form.controls;
   }
 
+  changepanel(){
+    this.router.navigate(['moedaconvidado']);
+  }
+
 }

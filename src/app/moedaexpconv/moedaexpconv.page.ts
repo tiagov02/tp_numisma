@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-moedaexpandida',
-  templateUrl: './moedaexpandida.page.html',
-  styleUrls: ['./moedaexpandida.page.scss'],
+  selector: 'app-moedaexpconv',
+  templateUrl: './moedaexpconv.page.html',
+  styleUrls: ['./moedaexpconv.page.scss'],
 })
-export class MoedaexpandidaPage implements OnInit {
+export class MoedaexpconvPage implements OnInit {
 
   public infoMoeda: any;
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
@@ -21,7 +21,7 @@ export class MoedaexpandidaPage implements OnInit {
   }
 
   changepanel() {
-    this.router.navigate(['messages']);
+    this.router.navigate(['start']);
   }
 
 }

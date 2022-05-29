@@ -38,6 +38,14 @@ const routes: Routes = [
   },  {
     path: 'messages',
     loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
+  },
+  {
+    path: 'moedaconvidado',
+    loadChildren: () => import('./moedaconvidado/moedaconvidado.module').then( m => m.MoedaconvidadoPageModule)
+  },
+  {
+    path: 'moedaexpconv',
+    loadChildren: () => import('./moedaexpconv/moedaexpconv.module').then( m => m.MoedaexpconvPageModule)
   }
 
 
