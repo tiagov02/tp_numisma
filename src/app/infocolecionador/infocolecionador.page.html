@@ -6,21 +6,21 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="moedas" color="test"></ion-back-button>
     </ion-buttons>
-    <ion-title *ngIf="userAtual">{{userAtual.nome}}</ion-title>
+    <ion-title *ngIf="dataUsers[username]">{{dataUsers[username].nome}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="userAtual">
+<ion-content *ngIf="dataUsers[username]">
   <header>
     <img src="./assets/component.png" alt="">
   </header>
 
-  <h1>{{userAtual.nome}}</h1>
+  <h1>{{dataUsers[username].nome}}</h1>
 
-  <img id="img" src="./assets/{{userAtual.imagem}}">
+  <img id="img" src="./assets/{{dataUsers[username].imagem}}">
 
   <div class="content">
-    <p><span>Localidade:</span> {{userAtual.localidade}}</p>
+    <p><span>Localidade:</span> {{dataUsers[username].localidade}}</p>
   </div>
 
 </ion-content>

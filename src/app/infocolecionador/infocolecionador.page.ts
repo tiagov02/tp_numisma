@@ -10,7 +10,6 @@ export class InfocolecionadorPage implements OnInit {
 
   public username:any;
   public dataUsers:any;
-  public userAtual:any;
 
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 
@@ -22,7 +21,6 @@ export class InfocolecionadorPage implements OnInit {
       }
     });
     this.leJSON();
-    this.userAtual=this.dataUsers[this.username];
   }
   leJSON(){
     fetch('./assets/data/users_data.json')
