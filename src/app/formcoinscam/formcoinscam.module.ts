@@ -8,13 +8,16 @@ import { FormcoinscamPageRoutingModule } from './formcoinscam-routing.module';
 
 import { FormcoinscamPage } from './formcoinscam.page';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FormcoinscamPageRoutingModule
+    FormcoinscamPageRoutingModule,
   ],
-  declarations: [FormcoinscamPage]
+  declarations: [FormcoinscamPage],
+
 })
 export class FormcoinscamPageModule {}
