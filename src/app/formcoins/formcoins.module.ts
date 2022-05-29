@@ -8,6 +8,7 @@ import { FormcoinsPageRoutingModule } from './formcoins-routing.module';
 
 import { FormcoinsPage } from './formcoins.page';
 
+
 @NgModule({
     imports: [
         CommonModule,

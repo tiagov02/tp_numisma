@@ -8,13 +8,16 @@ import { StartPageRoutingModule } from './start-routing.module';
 
 import { StartPage } from './start.page';
 
+import { IonicStorageModule } from '@ionic/storage-angular';
+
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
         StartPageRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        IonicModule.forRoot(),
     ],
   declarations: [StartPage]
 })

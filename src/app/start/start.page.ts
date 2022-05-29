@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {LoggedUserService} from "../services/logged-user.service";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class StartPage implements OnInit {
   form: FormGroup;
   isSubmitted: boolean;
 
-  constructor(public formBuilder: FormBuilder, private router: Router) {
+  constructor(public formBuilder: FormBuilder, private router: Router, private user:LoggedUserService) {
     this.isSubmitted = false;
   }
 
@@ -33,6 +34,7 @@ export class StartPage implements OnInit {
       console.log(this.form.value);
       this.router.navigate(['moedas']);
     }
+    this.user.setValue();
   }
 
   registar(){
