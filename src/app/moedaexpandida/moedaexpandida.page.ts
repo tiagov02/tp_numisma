@@ -20,9 +20,14 @@ export class MoedaexpandidaPage implements OnInit {
     });
   }
 
-
-  changepanel() {
-    this.router.navigate(['messages']);
+  changepanel(nomeColec:any) {
+    let dadosMoeda: NavigationExtras;
+    dadosMoeda = {
+      state: {
+        nome: nomeColec
+      }
+    };
+    this.router.navigate(['messages'],dadosMoeda);
   }
 
 }

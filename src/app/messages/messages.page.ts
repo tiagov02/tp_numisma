@@ -9,10 +9,17 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class MessagesPage implements OnInit {
 
   public infoMsg: any;
+  public nomeColec:any;
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.leJSON();
+    this.rotaAtiva.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.nomeColec = this.router.getCurrentNavigation().extras.state.nome;
+        console.log(this.nomeColec);
+      }
+    });
   }
 
   leJSON() {
