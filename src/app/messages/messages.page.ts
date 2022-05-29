@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-messages',
@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 export class MessagesPage implements OnInit {
 
   public infoMsg: any;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.leJSON();
@@ -23,5 +23,7 @@ export class MessagesPage implements OnInit {
         this.infoMsg=json;
       });
   }
+
+
 
 }

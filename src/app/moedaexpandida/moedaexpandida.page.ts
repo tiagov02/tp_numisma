@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
 
 @Component({
   selector: 'app-moedaexpandida',
@@ -19,6 +19,7 @@ export class MoedaexpandidaPage implements OnInit {
       }
     });
   }
+
 
   changepanel() {
     this.router.navigate(['messages']);
