@@ -10,7 +10,7 @@ import {ImagePicker} from "@ionic-native/image-picker/ngx";
 })
 export class FormcoinscamPage implements OnInit {
 
-  constructor(public photoService: CamService,private imgPicker: ImagePicker) { }
+  constructor(public photoService: CamService) { }
 
   ngOnInit() {
   }
