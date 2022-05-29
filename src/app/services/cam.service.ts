@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
-import { ImagePicker } from '@ionic-native/image-picker/ngx';
+//import { ImagePicker } from '@ionic-native/image-picker/ngx';
+//import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,11 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
 export class CamService {
   public imgRes: any;
   public options: any;
+  photo: string = '';
 
-  constructor(public imgPicker:ImagePicker) { }
+
+  // @ts-ignore
+  constructor(private camera: Camera) { }
 
   public async addNewToGallery() {
     // Take a photo
@@ -20,6 +24,9 @@ export class CamService {
       quality: 100
     });
   }
+
+
+}
 
   //Erro netsa
   /*public async imagePicker() {
@@ -39,4 +46,3 @@ export class CamService {
     });
   }*/
 
-}
