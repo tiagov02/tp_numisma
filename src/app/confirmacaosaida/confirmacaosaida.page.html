@@ -1,9 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>confirmacaosaida</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="moedas" color="test"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <header>
+    <img src="./assets/component.png" alt="">
+  </header>
 
+
+  <img src="./assets/image_numisma.png" class="center"/>
+  <h1></h1>
+  <center><ion-text id="buttonlogin" fill="clear" size="full">Pretende sair?</ion-text></center>
+  <h1></h1>
+  <ion-button id="button" (click)="voltar()" type="button" expand="block">Sim, Pretendo sair</ion-button>
 </ion-content>
