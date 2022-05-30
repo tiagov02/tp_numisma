@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-infocolecionador',
@@ -8,8 +8,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class InfocolecionadorPage implements OnInit {
 
-  public username:any;
-  public dataUsers:any;
+  public username: any;
+  public dataUsers: any;
 
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 

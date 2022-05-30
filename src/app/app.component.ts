@@ -12,8 +12,8 @@ export class AppComponent {
     //{ title: 'Mensagens', url: '/registar', icon: 'chatbubbles' },
     //{ title: 'Meus Anúncios', url: '/registar', icon: 'bag' },
     //{ title: 'Perfil', url: '/registar', icon: 'person-circle' },
-    //{ title: 'Sair', url: '/registar', icon: 'log-out' }
-    {title: 'Ver moedas',url:'/moedas',icon:'bag'}
+    { title: 'Sair', url: '/start', icon: 'log-out' }
+    //{title: 'Ver moedas',url:'/moedas',icon:'bag'}
     //Comentei esta parte, quando acabarmos como já esta feito descomentamos
   ];
   constructor() {}
