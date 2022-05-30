@@ -13,6 +13,10 @@ export class FormcoinscamPage implements OnInit {
   ngOnInit() {
   }
 
+  submitForm() {
+    confirm("Inseriu uma moeda com sucesso");
+    }
+
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
   }
