@@ -7,8 +7,9 @@
     "preco_euros": "150,00",
     "tipo_transacao": "compra",
     "descricao": "Uma moeda de 90",
-    "estadoConservacao": "Novo",
-   "colecionador_user": "admin"
+    "estadoConservacao": "novo",
+    "qtd": 2,
+    "colecionador_user": "admin"
   },
 
   {
@@ -18,7 +19,8 @@
     "localidade": "Porto",
     "tipo_transacao": "troca",
     "descricao": "Uma moeda com pormenores dourados",
-    "estadoConservacao": "Muito degradado",
+    "estadoConservacao": "muito degradado",
+    "qtd": 10,
     "colecionador_user": "joaquim"
   },
 
@@ -30,7 +32,8 @@
     "preco_euros": "200,00",
     "tipo_transacao": "compra",
     "descricao": "Uma moeda do tempo de D. Afonos Henriques",
-    "estadoConservacao": "Degradado",
+    "estadoConservacao": "degradado",
+    "qtd": 1,
     "colecionador_user": "josemiranda"
   }]
 
