@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'infocolecionador',
     loadChildren: () => import('./infocolecionador/infocolecionador.module').then( m => m.InfocolecionadorPageModule)
+  },
+  {
+    path: 'confirmacaosaida',
+    loadChildren: () => import('./confirmacaosaida/confirmacaosaida.module').then( m => m.ConfirmacaosaidaPageModule)
   }
 
 
