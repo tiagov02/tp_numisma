@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CamService } from '../services/cam.service';
-import {ImagePicker} from "@ionic-native/image-picker/ngx";
-
 
 @Component({
   selector: 'app-formcoinscam',
@@ -19,7 +17,5 @@ export class FormcoinscamPage implements OnInit {
     this.photoService.addNewToGallery();
   }
 
-  /*photoFromPhoneGallery() {
-    this.photoService.imagePicker();
-  }*/
 }
+
