@@ -5,7 +5,9 @@
     "id": "1",
     "nome": "António Alves",
     "imagem": "user.jpg",
-    "localidade": "Porto"
+    "localidade": "Porto",
+    "anuncios_publicados": "1",
+    "years_in_app": "1"
   },
   "joaquim": {
     "login": "joaquim",
@@ -13,7 +15,10 @@
     "id": "2",
     "nome": "Joaquim",
     "imagem": "user.jpg",
-    "localidade": "Porto"
+    "localidade": "Porto",
+    "anuncios_publicados": "1",
+    "years_in_app": "2"
+
   },
   "josemiranda": {
     "login": "josemiranda",
@@ -21,6 +26,8 @@
     "id": "2",
     "nome": "José Miranda",
     "imagem": "user.jpg",
-    "localidade": "Porto"
+    "localidade": "Porto",
+    "anuncios_publicados": "1",
+    "years_in_app": "1"
   }
 }
