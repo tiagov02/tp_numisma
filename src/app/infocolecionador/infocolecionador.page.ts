@@ -14,13 +14,14 @@ export class InfocolecionadorPage implements OnInit {
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 
   ngOnInit() {
+    this.leJSON();
+
     this.rotaAtiva.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.username = this.router.getCurrentNavigation().extras.state.nome_user;
-        //console.log(this.infoMoeda);
+        console.log(this.username);
       }
     });
-    this.leJSON();
   }
   leJSON(){
     fetch('./assets/data/users_data.json')

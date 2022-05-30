@@ -6,11 +6,11 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="moedaexpandida" color="test"></ion-back-button>
     </ion-buttons>
-    <ion-title *ngIf="dataUsers[username]">{{dataUsers[username].nome}}</ion-title>
+    <ion-title *ngIf="dataUsers && dataUsers[username]">{{dataUsers[username].nome}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="dataUsers[username]">
+<ion-content *ngIf="dataUsers && dataUsers[username] && username">
   <header>
     <img src="./assets/component.png" alt="">
   </header>

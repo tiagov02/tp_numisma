@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
 
 @Component({
@@ -6,10 +6,13 @@ import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
   templateUrl: './moedaexpandida.page.html',
   styleUrls: ['./moedaexpandida.page.scss'],
 })
+
 export class MoedaexpandidaPage implements OnInit {
 
   public infoMoeda: any;
-  constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
+
+  constructor(private router: Router, private rotaAtiva: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.rotaAtiva.queryParams.subscribe(params => {
@@ -20,24 +23,22 @@ export class MoedaexpandidaPage implements OnInit {
     });
   }
 
-  changepanel(nomeColec:any) {
-    let dadosMoeda: NavigationExtras;
-    dadosMoeda = {
+  changepanel(nomeColec: any) {
+    const dadosMoeda: NavigationExtras = {
       state: {
         nome: nomeColec
       }
     };
-    this.router.navigate(['messages'],dadosMoeda);
+    this.router.navigate(['messages'], dadosMoeda);
   }
 
-  verPerfil(userName:any){
-    let dataUser:NavigationExtras;
-    dataUser={
-      state:{
-        nome_user:userName
+  verPerfil(userName: any) {
+    const dataUser: NavigationExtras = {
+      state: {
+        nome_user: userName
       }
-    }
-    this.router.navigate(['infocolecionador'],dataUser);
+    };
+    this.router.navigate(['infocolecionador'], dataUser);
   }
 
 }
