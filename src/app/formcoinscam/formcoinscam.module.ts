@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormcoinscamPageRoutingModule } from './formcoinscam-routing.module';
 
 import { FormcoinscamPage } from './formcoinscam.page';
-
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 
 @NgModule({
@@ -18,6 +18,7 @@ import { FormcoinscamPage } from './formcoinscam.page';
     FormcoinscamPageRoutingModule,
   ],
   declarations: [FormcoinscamPage],
+  providers:[ScreenOrientation]
 
 })
 export class FormcoinscamPageModule {}

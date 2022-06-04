@@ -8,6 +8,8 @@ import { InfocolecionadorPageRoutingModule } from './infocolecionador-routing.mo
 
 import { InfocolecionadorPage } from './infocolecionador.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { InfocolecionadorPage } from './infocolecionador.page';
     IonicModule,
     InfocolecionadorPageRoutingModule
   ],
-  declarations: [InfocolecionadorPage]
+  declarations: [InfocolecionadorPage],
+  providers:[ScreenOrientation]
 })
 export class InfocolecionadorPageModule {}
