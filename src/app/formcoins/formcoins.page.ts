@@ -30,7 +30,7 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
       location: ['', [Validators.required,]],
       qtd: ['', [Validators.required,]],
       price: ['', [Validators.required,]],
-      value: ['', [Validators.required,]],
+      valor: ['', [Validators.required,]],
       type: ['', [Validators.required,]],
       state: ['', [Validators.required,]]
     });
