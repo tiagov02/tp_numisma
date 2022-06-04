@@ -4,18 +4,21 @@ import {Observable, timer} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {NavigationExtras, Router} from '@angular/router';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import {ViewWillEnter} from "@ionic/angular";
+
 // @ts-ignore
 @Component({
   selector: 'app-formcoins',
   templateUrl: './formcoins.page.html',
   styleUrls: ['./formcoins.page.scss'],
 })
-export class FormcoinsPage implements OnInit {
+export class FormcoinsPage implements OnInit ,ViewWillEnter{
 
   formcoins: FormGroup;
   isSubmitted: boolean;
 
-  constructor(public formBuilder: FormBuilder, private router: Router) {
+  constructor(public formBuilder: FormBuilder, private router: Router, private orientacao: ScreenOrientation) {
     this.isSubmitted = false;
   }
 
@@ -60,6 +63,9 @@ export class FormcoinsPage implements OnInit {
       this.router.navigate(['formcoinscam']);
       //nao funciona
     }
+  }
+  ionViewWillEnter(): void {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
   }
 
 }

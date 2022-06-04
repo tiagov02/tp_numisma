@@ -8,6 +8,8 @@ import { ConfirmacaosaidaPageRoutingModule } from './confirmacaosaida-routing.mo
 
 import { ConfirmacaosaidaPage } from './confirmacaosaida.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { ConfirmacaosaidaPage } from './confirmacaosaida.page';
     IonicModule,
     ConfirmacaosaidaPageRoutingModule
   ],
-  declarations: [ConfirmacaosaidaPage]
+  declarations: [ConfirmacaosaidaPage],
+  providers:[ScreenOrientation]
 })
 export class ConfirmacaosaidaPageModule {}

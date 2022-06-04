@@ -30,30 +30,9 @@ export class MoedasPage implements OnInit {
         this.dataMoedas=json;
       });
   }
-
-  updateMoedas(ev: any) {
-    this.leJSON();
-
-    const val= ev.target.value;
-
-    if (val && val.trim() != '') {
-      this.dataMoedas = this.dataMoedas.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      });
-    }
-  }
-
-  /*public handleInput(event) {
-    const query = event.target.value.toLowerCase();
-    requestAnimationFrame(() => {
-      this.dataMoedas.forEach((item) => {
-        const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
-        item.style.display = shouldShow ? 'block' : 'none';
-      });
-    });
-  }*/
   public verDetalherMoeda(moeda: any) {
     let infoMoeda: NavigationExtras;
+    // eslint-disable-next-line prefer-const
     infoMoeda = {
       state: {
         dadosMoeda: moeda

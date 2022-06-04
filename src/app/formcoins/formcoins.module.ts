@@ -8,6 +8,8 @@ import { FormcoinsPageRoutingModule } from './formcoins-routing.module';
 
 import { FormcoinsPage } from './formcoins.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 
 @NgModule({
     imports: [
@@ -17,6 +19,7 @@ import { FormcoinsPage } from './formcoins.page';
         FormcoinsPageRoutingModule,
         ReactiveFormsModule
     ],
-  declarations: [FormcoinsPage]
+  declarations: [FormcoinsPage],
+  providers:[ScreenOrientation]
 })
 export class FormcoinsPageModule {}
