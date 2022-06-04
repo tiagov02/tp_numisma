@@ -10,6 +10,8 @@ import { MoedasPage } from './moedas.page';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MoedasPageRoutingModule,
     Ng2SearchPipeModule
   ],
-  declarations: [MoedasPage]
+  declarations: [MoedasPage],
+  providers:[ScreenOrientation]
 })
 export class MoedasPageModule {}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {ViewWillEnter} from '@ionic/angular';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 
 
@@ -9,15 +11,19 @@ import {Router} from "@angular/router";
   templateUrl: './start.page.html',
   styleUrls: ['./start.page.scss'],
 })
-export class StartPage implements OnInit {
+export class StartPage implements OnInit, ViewWillEnter {
 
   // eslint-disable-next-line @typescript-eslint/naming-convention
   form: FormGroup;
   isSubmitted: boolean;
 
-  constructor(public formBuilder: FormBuilder, private router: Router) {
+  constructor(public formBuilder: FormBuilder, private router: Router, private orientacao: ScreenOrientation) {
     this.isSubmitted = false;
   }
+
+  ionViewWillEnter(): void {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
+    }
 
   ngOnInit() {
     this.form = this.formBuilder.group({

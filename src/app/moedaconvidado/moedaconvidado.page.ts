@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import {NavigationExtras, Router} from '@angular/router';
+import {ViewWillEnter} from '@ionic/angular';
+import {ScreenOrientation} from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-moedaconvidado',
   templateUrl: './moedaconvidado.page.html',
   styleUrls: ['./moedaconvidado.page.scss'],
 })
-export class MoedaconvidadoPage implements OnInit {
+export class MoedaconvidadoPage implements OnInit, ViewWillEnter{
 
   public dataMoedas: any;
   public filterTerm: string;
-  constructor(private router: Router) {
+  constructor(private router: Router,private orientacao:ScreenOrientation) {
   }
+
+  ionViewWillEnter(): void {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
+    }
 
   ngOnInit(): void {
     this.leJSON();

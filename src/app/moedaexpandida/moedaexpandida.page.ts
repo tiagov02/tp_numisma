@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
+import {ActivatedRoute, NavigationExtras, Router} from '@angular/router';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import {ViewWillEnter} from '@ionic/angular';
 
 @Component({
   selector: 'app-moedaexpandida',
@@ -7,11 +9,11 @@ import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
   styleUrls: ['./moedaexpandida.page.scss'],
 })
 
-export class MoedaexpandidaPage implements OnInit {
+export class MoedaexpandidaPage implements OnInit , ViewWillEnter{
 
   public infoMoeda: any;
 
-  constructor(private router: Router, private rotaAtiva: ActivatedRoute) {
+  constructor(private router: Router, private rotaAtiva: ActivatedRoute,private orientacao: ScreenOrientation) {
   }
 
   ngOnInit() {
@@ -39,6 +41,10 @@ export class MoedaexpandidaPage implements OnInit {
       }
     };
     this.router.navigate(['infocolecionador'], dataUser);
+  }
+
+  ionViewWillEnter(): void {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
   }
 
 }

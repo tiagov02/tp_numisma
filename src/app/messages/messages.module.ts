@@ -8,6 +8,8 @@ import { MessagesPageRoutingModule } from './messages-routing.module';
 
 import { MessagesPage } from './messages.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { MessagesPage } from './messages.page';
     IonicModule,
     MessagesPageRoutingModule
   ],
-  declarations: [MessagesPage]
+  declarations: [MessagesPage],
+  providers:[ScreenOrientation]
 })
 export class MessagesPageModule {}

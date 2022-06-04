@@ -10,6 +10,8 @@ import { StartPage } from './start.page';
 
 import { IonicStorageModule } from '@ionic/storage-angular';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -19,6 +21,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
         ReactiveFormsModule,
         IonicModule.forRoot(),
     ],
-  declarations: [StartPage]
+  declarations: [StartPage],
+  providers:[ScreenOrientation]
 })
 export class StartPageModule {}

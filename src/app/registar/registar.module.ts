@@ -8,6 +8,8 @@ import { RegistarPageRoutingModule } from './registar-routing.module';
 
 import { RegistarPage } from './registar.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -16,6 +18,7 @@ import { RegistarPage } from './registar.page';
         RegistarPageRoutingModule,
         ReactiveFormsModule
     ],
-  declarations: [RegistarPage]
+  declarations: [RegistarPage],
+  providers:[ScreenOrientation]
 })
 export class RegistarPageModule {}

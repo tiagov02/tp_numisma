@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import {ViewWillEnter} from "@ionic/angular";
+import {ViewWillEnter} from '@ionic/angular';
 
 @Component({
   selector: 'app-confirmacaosaida',

@@ -8,6 +8,8 @@ import { MoedaexpandidaPageRoutingModule } from './moedaexpandida-routing.module
 
 import { MoedaexpandidaPage } from './moedaexpandida.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { MoedaexpandidaPage } from './moedaexpandida.page';
     IonicModule,
     MoedaexpandidaPageRoutingModule
   ],
-  declarations: [MoedaexpandidaPage]
+  declarations: [MoedaexpandidaPage],
+  providers:[ScreenOrientation]
 })
 export class MoedaexpandidaPageModule {}

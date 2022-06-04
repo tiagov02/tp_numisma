@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CamService } from '../services/cam.service';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import {ViewWillEnter} from "@ionic/angular";
+import {ViewWillEnter} from '@ionic/angular';
 
 @Component({
   selector: 'app-formcoinscam',
@@ -26,7 +26,7 @@ export class FormcoinscamPage implements OnInit,ViewWillEnter {
   }
 
   ionViewWillEnter(): void {
-    this.orientacao.lock(this.orientacao.ORIENTATIONS.LANDSCAPE);
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
   }
 
 }

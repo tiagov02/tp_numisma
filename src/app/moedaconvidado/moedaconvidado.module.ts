@@ -10,6 +10,8 @@ import { MoedaconvidadoPage } from './moedaconvidado.page';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MoedaconvidadoPageRoutingModule,
     Ng2SearchPipeModule
   ],
-  declarations: [MoedaconvidadoPage]
+  declarations: [MoedaconvidadoPage],
+  providers:[ScreenOrientation]
 })
 export class MoedaconvidadoPageModule {}

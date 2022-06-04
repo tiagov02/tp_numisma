@@ -1,22 +1,25 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationExtras, Router} from '@angular/router';
-//import {of} from "rxjs";
-//import {of} from "rxjs";
-//import any = jasmine.any;
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import {ViewWillEnter} from '@ionic/angular';
 
 @Component({
   selector: 'app-moedas',
   templateUrl: './moedas.page.html',
   styleUrls: ['./moedas.page.scss'],
 })
-export class MoedasPage implements OnInit {
+export class MoedasPage implements OnInit, ViewWillEnter{
 
   //public searchbar = document.querySelector('ion-searchbar');
   public dataMoedas: any;
   public filterTerm: string;
-  constructor(private router: Router) {
+  constructor(private router: Router,private orientacao: ScreenOrientation) {
   }
+
+  ionViewWillEnter(): void {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
+    }
 
   ngOnInit(): void {
     this.leJSON();

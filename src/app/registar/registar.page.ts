@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
-import {delay} from "rxjs/operators";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {delay} from 'rxjs/operators';
+import {ViewWillEnter} from '@ionic/angular';
+import {ScreenOrientation} from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-registar',
   templateUrl: './registar.page.html',
   styleUrls: ['./registar.page.scss'],
 })
-export class RegistarPage implements OnInit {
+export class RegistarPage implements OnInit, ViewWillEnter{
 
   formRegistar: FormGroup;
   isSubmitted: boolean;
   delayInMilliseconds = 2000;
 
-  constructor(public formBuilder: FormBuilder, private router: Router) {
+  constructor(public formBuilder: FormBuilder, private router: Router, private orientacao: ScreenOrientation) {
     this.isSubmitted = false;
   }
 
@@ -55,5 +57,9 @@ export class RegistarPage implements OnInit {
 
   get formControls() {
     return this.formRegistar.controls;
+  }
+
+  ionViewWillEnter(): void {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
   }
 }
