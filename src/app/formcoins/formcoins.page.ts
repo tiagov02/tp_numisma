@@ -41,10 +41,10 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
     if (!this.formcoins.valid) {
       return false;
     } else {
-      console.log(this.formcoins.value);
+      //console.log(this.formcoins.value);
+      console.log(this.formcoins.controls.type.value);
       this.router.navigate(['formcoinscam']);
       this.formcoins.reset();
-      console.log(this.formcoins.value.qtd);
     }
   }
 
