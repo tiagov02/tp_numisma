@@ -8,6 +8,8 @@ import { IntroPageRoutingModule } from './intro-routing.module';
 
 import { IntroPage } from './intro.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { IntroPage } from './intro.page';
     IonicModule,
     IntroPageRoutingModule
   ],
-  declarations: [IntroPage]
+  declarations: [IntroPage],
+  providers:[ScreenOrientation]
 })
 export class IntroPageModule {}
