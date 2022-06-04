@@ -5,7 +5,7 @@ import {map} from 'rxjs/operators';
 import {NavigationExtras, Router} from '@angular/router';
 
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import {ViewWillEnter} from "@ionic/angular";
+import {ViewWillEnter} from '@ionic/angular';
 
 // @ts-ignore
 @Component({
@@ -53,9 +53,12 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
     return this.formcoins.controls;
   }
 
-  onChange(selectedValue){
-    // eslint-disable-next-line no-console
-    console.info('Selected:', selectedValue);
+  onChange(): boolean{
+    // eslint-disable-next-line eqeqeq
+    if(this.formcoins.controls.type.value=='v'){
+      return true;
+    }
+    return false;
   }
 
   continuetoformcoins(){
