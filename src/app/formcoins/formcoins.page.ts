@@ -30,7 +30,9 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
       location: ['', [Validators.required,]],
       qtd: ['', [Validators.required,]],
       price: ['', [Validators.required,]],
-      value: ['', [Validators.required,]]
+      value: ['', [Validators.required,]],
+      type: ['', [Validators.required,]],
+      state: ['', [Validators.required,]]
     });
   }
 
@@ -41,6 +43,7 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
     } else {
       console.log(this.formcoins.value);
       this.router.navigate(['formcoinscam']);
+      this.formcoins.reset();
       console.log(this.formcoins.value.qtd);
     }
   }
@@ -48,6 +51,11 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
   // eslint-disable-next-line @typescript-eslint/member-ordering
   get formControls() {
     return this.formcoins.controls;
+  }
+
+  onChange(selectedValue){
+    // eslint-disable-next-line no-console
+    console.info('Selected:', selectedValue);
   }
 
   continuetoformcoins(){
