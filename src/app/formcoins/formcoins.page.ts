@@ -29,13 +29,12 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
       codpostal: ['', [Validators.required, Validators.pattern('\\d{4}((-)\\d{3})')]],
       location: ['', [Validators.required,]],
       qtd: ['', [Validators.required,]],
-      price: ['', [Validators.required,]],
+      price: [''],
       valor: ['', [Validators.required,]],
       type: ['', [Validators.required,]],
       state: ['', [Validators.required,]]
     });
   }
-
   submitForm() {
     this.isSubmitted = true;
     if (!this.formcoins.valid) {
@@ -56,8 +55,12 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
   onChange(): boolean{
     // eslint-disable-next-line eqeqeq
     if(this.formcoins.controls.type.value=='v'){
+      this.formcoins.get('price').setValidators([Validators.required]);
+      this.formcoins.get('price').updateValueAndValidity();
       return true;
     }
+    this.formcoins.get('price').clearValidators();
+    this.formcoins.get('price').updateValueAndValidity();
     return false;
   }
 
