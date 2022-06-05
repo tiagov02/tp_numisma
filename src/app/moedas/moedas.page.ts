@@ -11,7 +11,6 @@ import {ViewWillEnter} from '@ionic/angular';
 })
 export class MoedasPage implements OnInit, ViewWillEnter{
 
-  //public searchbar = document.querySelector('ion-searchbar');
   public dataMoedas: any;
   public filterTerm: string;
   constructor(private router: Router,private orientacao: ScreenOrientation) {
