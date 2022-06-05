@@ -65,17 +65,8 @@ export class FormcoinsPage implements OnInit ,ViewWillEnter{
   }
 
   continuetoformcoins(){
-    //let infoMoeda: NavigationExtras;
-    // eslint-disable-next-line prefer-const
-    /*infoMoeda= {
-      state:{
-        dadosMoeda: this.dataMoedas[moedaKey]
-      }
-    };*/
-    // eslint-disable-next-line eqeqeq
     if(this.isSubmitted==true) {
       this.router.navigate(['formcoinscam']);
-      //nao funciona
     }
   }
   ionViewWillEnter(): void {

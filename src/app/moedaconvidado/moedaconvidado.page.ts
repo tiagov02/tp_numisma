@@ -44,15 +44,6 @@ export class MoedaconvidadoPage implements OnInit, ViewWillEnter{
     }
   }
 
-  /*public handleInput(event) {
-    const query = event.target.value.toLowerCase();
-    requestAnimationFrame(() => {
-      this.dataMoedas.forEach((item) => {
-        const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
-        item.style.display = shouldShow ? 'block' : 'none';
-      });
-    });
-  }*/
   public verDetalherMoeda(moeda: any) {
     let infoMoeda: NavigationExtras;
     infoMoeda = {
