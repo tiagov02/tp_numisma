@@ -20,7 +20,6 @@ export class MoedaexpandidaPage implements OnInit , ViewWillEnter{
     this.rotaAtiva.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.infoMoeda = this.router.getCurrentNavigation().extras.state.dadosMoeda;
-        //console.log(this.infoMoeda);
       }
     });
   }
