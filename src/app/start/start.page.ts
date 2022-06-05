@@ -16,14 +16,16 @@ export class StartPage implements OnInit, ViewWillEnter {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   form: FormGroup;
   isSubmitted: boolean;
+  ionViewWillEnter(): void {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
+  }
 
+  // eslint-disable-next-line @typescript-eslint/member-ordering
   constructor(public formBuilder: FormBuilder, private router: Router, private orientacao: ScreenOrientation) {
     this.isSubmitted = false;
   }
 
-  ionViewWillEnter(): void {
-    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
-    }
+
 
   ngOnInit() {
     this.form = this.formBuilder.group({
